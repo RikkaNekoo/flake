@@ -1,0 +1,9 @@
+{ pkgs, ... }:
+
+{
+  environment.systemPackages = with pkgs; [
+    nixd
+    nixfmt
+    patchelf
+  ];
+}
