@@ -21,15 +21,15 @@
 
   # TODO: Shit implement
   systemd.services.podman-qbittorrent.postStart = ''
-  cg=$(
-    ${pkgs.podman}/bin/podman inspect qbittorrent \
-      | ${pkgs.jq}/bin/jq -r '.[0].State.CgroupPath'
-  )
+    cg=$(
+      ${pkgs.podman}/bin/podman inspect qbittorrent \
+        | ${pkgs.jq}/bin/jq -r '.[0].State.CgroupPath'
+    )
 
-  cg=$(echo "$cg" | sed 's#^/##')
-  cg="$cg/container"
+    cg=$(echo "$cg" | sed 's#^/##')
+    cg="$cg/container"
 
-  ${pkgs.nftables}/bin/nft flush set inet filter qb_cgroup
-  ${pkgs.nftables}/bin/nft add element inet filter qb_cgroup "{ \"$cg\" }"
-'';
+    ${pkgs.nftables}/bin/nft flush set inet filter qb_cgroup
+    ${pkgs.nftables}/bin/nft add element inet filter qb_cgroup "{ \"$cg\" }"
+  '';
 }
