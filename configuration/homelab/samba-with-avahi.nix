@@ -7,6 +7,7 @@ _:{
         workgroup = "WORKGROUP";
         "server role" = "standalone server";
         "server min protocol" = "SMB2";
+        "server multi channel support" = "yes";
         "map to guest" = "bad user";
 
         "use sendfile" = "yes";
