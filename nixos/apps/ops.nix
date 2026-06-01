@@ -7,5 +7,6 @@
     lm_sensors
     smartmontools
     jq
+    ethtool
   ];
 }
