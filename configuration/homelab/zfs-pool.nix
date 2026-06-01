@@ -14,4 +14,7 @@
   # Import pool
   boot.zfs.devNodes = "/dev/disk/by-id";
   boot.zfs.extraPools = [ "data" ];
+
+  # NFS server for sharing ZFS pool
+  services.nfs.server.enable = true;
 }
