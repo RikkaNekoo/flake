@@ -20,6 +20,8 @@
     networkConfig.DHCP = "yes";
   };
 
+  swapDevices = [ { device = "/dev/disk/by-id/nvme-INTEL_MEMPEK1W016GA_PHBT721202K8016D-part2"; } ];
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
