@@ -15,7 +15,12 @@
     ''acpi_osi="Windows 2020"''
   ];
 
-  systemd.network.networks."90-lan" = {
+  systemd.network.networks."10-laptop" = {
+    matchConfig.Name = "enp1s0";
+    address = [ "10.24.0.1/30" ];
+  };
+
+  systemd.network.networks."90-wan" = {
     matchConfig.Name = "en*";
     networkConfig.DHCP = "yes";
   };
