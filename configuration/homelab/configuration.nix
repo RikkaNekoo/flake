@@ -11,7 +11,6 @@
     ../../nixos/services/zram.nix
     ../../nixos/apps/ops.nix
     ../../nixos/apps/nix.nix
-    ../../nixos/common/kernel.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
