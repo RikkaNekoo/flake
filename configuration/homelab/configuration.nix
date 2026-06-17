@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
@@ -11,13 +11,11 @@
     ../../nixos/services/zram.nix
     ../../nixos/apps/ops.nix
     ../../nixos/apps/nix.nix
+    ../../nixos/common/kernel.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  nixpkgs.overlays = [ inputs.nix-cachyos-kernel.overlays.pinned ];
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto;
 
   networking.hostName = "Rikka-HomeLab";
   networking.useNetworkd = true;
