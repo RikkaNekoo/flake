@@ -13,6 +13,8 @@
   boot.kernelParams = [
     "acpi_osi=!"
     ''acpi_osi="Windows 2020"''
+    "intel_iommu=on"
+    "iommu=pt"
   ];
 
   systemd.network.networks."10-laptop" = {
