@@ -10,6 +10,7 @@
     ./enable-mlx4-vf.nix
     ../../nixos/filesystems/efi-with-btrfs.nix
     ../../nixos/services/zram.nix
+    ../../nixos/services/kvm.nix
     ../../nixos/apps/ops.nix
     ../../nixos/apps/nix.nix
   ];
