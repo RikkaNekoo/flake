@@ -7,6 +7,7 @@
     ./containers.nix
     ./qbit-dscp.nix
     ./samba-with-avahi.nix
+    ./enable-mlx4-vf.nix
     ../../nixos/filesystems/efi-with-btrfs.nix
     ../../nixos/services/zram.nix
     ../../nixos/apps/ops.nix
