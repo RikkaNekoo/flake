@@ -23,9 +23,11 @@
     "iommu=pt"
   ];
 
-  systemd.network.networks."90-lan" = {
-    matchConfig.Name = "en*";
-    networkConfig.DHCP = "yes";
+  systemd.network.networks."90-wan" = {
+    matchConfig.Name = "enp5s0d1";
+    address = [ "10.21.0.99/24" ];
+    gateway = [ "10.21.0.1" ];
+    dns = [ "10.21.0.1" ];
   };
 
   swapDevices = [ { device = "/dev/disk/by-id/nvme-INTEL_MEMPEK1W016GA_PHBT721202K8016D-part2"; } ];
