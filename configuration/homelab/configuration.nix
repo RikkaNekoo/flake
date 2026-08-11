@@ -12,6 +12,7 @@
     ../../nixos/filesystems/efi-with-btrfs.nix
     ../../nixos/services/zram.nix
     ../../nixos/services/kvm.nix
+    ../../nixos/services/podman.nix
     ../../nixos/apps/ops.nix
     ../../nixos/apps/nix.nix
   ];

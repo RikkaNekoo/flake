@@ -1,12 +1,4 @@
 _:{
-  # Runtime
-  virtualisation.podman = {
-    enable = true;
-    autoPrune.enable = true;
-    dockerCompat = true;
-  };
-  virtualisation.oci-containers.backend = "podman";
-
   #Ani-RSS
   virtualisation.oci-containers.containers."ani-rss" = {
     image = "wushuo894/ani-rss:latest";
