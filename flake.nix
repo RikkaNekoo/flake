@@ -21,13 +21,25 @@
     };
   };
 
-  outputs = { self, nixpkgs, nix-cachyos-kernel, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations.Rikka-HomeLab = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./configuration/homelab/configuration.nix
         ./nixos/common
         inputs.vscode-server.nixosModules.default
+        inputs.disko.nixosModules.disko
+      ];
+      specialArgs = {
+        inherit inputs;
+      };
+    };
+
+    nixosConfigurations.Homura-SG = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./configuration/homura-sg/configuration.nix
+        ./nixos/common
         inputs.disko.nixosModules.disko
       ];
       specialArgs = {
