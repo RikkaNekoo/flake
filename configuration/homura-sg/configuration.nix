@@ -2,6 +2,7 @@ _: {
 
   imports = [
     ./hardware-configuration.nix
+    ./containers.nix
     ../../nixos/roles/server.nix
     ../../nixos/filesystems/universal-xfs.nix
     ../../nixos/services/zram.nix
