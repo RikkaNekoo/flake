@@ -1,8 +1,8 @@
 _: {
 
   imports = [
+    ../../nixos/containers/homura-sg
     ./hardware-configuration.nix
-    ./containers.nix
     ../../nixos/roles/server.nix
     ../../nixos/filesystems/universal-xfs.nix
     ../../nixos/services/zram.nix

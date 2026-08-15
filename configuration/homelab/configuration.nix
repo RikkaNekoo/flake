@@ -2,9 +2,9 @@
 
 {
   imports = [
+    ../../nixos/containers/homelab
     ./hardware-configuration.nix
     ./zfs-pool.nix
-    ./containers.nix
     ./qbit-dscp.nix
     ./samba-with-avahi.nix
     ./enable-mlx4-vf.nix
