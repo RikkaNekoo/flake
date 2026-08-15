@@ -3,6 +3,7 @@ _:{
     image = "ghcr.io/docker-mailserver/docker-mailserver:latest";
     hostname = "mail.rikka.im";
     environmentFiles = [ "/var/lib/containers/mailserver/mailserver.env" ];
+    networks = [ "rikka" ];
     ports = [
       "25:25"
       "143:143"
@@ -25,7 +26,6 @@ _:{
       "--health-cmd=ss --listening --tcp | grep -P 'LISTEN.+:smtp' || exit 1"
       "--health-timeout=3s"
       "--health-retries=1"
-      "--network=rikka"
     ];
   };
 }

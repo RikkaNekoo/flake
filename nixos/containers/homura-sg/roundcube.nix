@@ -2,6 +2,7 @@ _:{
   virtualisation.oci-containers.containers."roundcube" = {
     image = "roundcube/roundcubemail:latest";
     environmentFiles = [ "/var/lib/containers/roundcube/roundcube.env" ];
+    networks = [ "rikka" ];
     environment = {
       "ROUNDCUBEMAIL_DB_TYPE" = "pgsql";
       "ROUNDCUBEMAIL_DB_HOST" = "pgsql";
@@ -13,8 +14,5 @@ _:{
       "/var/lib/containers/roundcube/www:/var/www/html:rw"
     ];
     log-driver = "journald";
-    extraOptions = [
-      "--network=rikka"
-    ];
   };
 }

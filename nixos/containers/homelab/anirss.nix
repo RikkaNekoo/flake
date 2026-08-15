@@ -1,9 +1,8 @@
 _:{
   virtualisation.oci-containers.containers."ani-rss" = {
     image = "wushuo894/ani-rss:latest";
+    user = "1000:100";
     environment = {
-      "PUID" = "1000";
-      "PGID" = "100";
       "CONFIG" = "/config";
       "SERVER_PORT" = "7789";
       "TZ" = "Asia/Shanghai";

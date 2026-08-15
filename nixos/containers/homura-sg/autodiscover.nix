@@ -1,6 +1,7 @@
 _:{
   virtualisation.oci-containers.containers."autodiscover" = {
     image = "monogramm/autodiscover-email-settings:latest";
+    networks = [ "rikka" ];
     environment = {
       "COMPANY_NAME" = "RikkaMail";
       "SUPPORT_URL" = "https://mail.rikka.im";
@@ -17,8 +18,5 @@ _:{
       "LDAP_UUID" = "b0d3cde7-bfde-4281-bffc-cad0d723a337";
     };
     log-driver = "journald";
-    extraOptions = [
-      "--network=rikka"
-    ];
   };
 }

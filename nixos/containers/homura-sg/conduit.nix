@@ -2,6 +2,7 @@ _:{
   virtualisation.oci-containers.containers."conduit" = {
     image = "matrixconduit/matrix-conduit:latest";
     environmentFiles = [ "/var/lib/containers/conduit/conduit.env" ];
+    networks = [ "rikka" ];
     environment = {
       "CONDUIT_SERVER_NAME" = "rikka.im";
       "CONDUIT_DATABASE_PATH" = "/var/lib/matrix-conduit/";
@@ -19,8 +20,5 @@ _:{
       "/var/lib/containers/conduit/data/db:/var/lib/matrix-conduit/:rw"
     ];
     log-driver = "journald";
-    extraOptions = [
-      "--network=rikka"
-    ];
   };
 }

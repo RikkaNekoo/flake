@@ -6,6 +6,7 @@ _:{
       "POSTGRES_DB" = "postgres";
     };
     environmentFiles = [ "/var/lib/containers/pgsql/pgsql.env" ];
+    networks = [ "rikka" ];
     ports = [
       "58200:5432"
     ];
@@ -14,8 +15,5 @@ _:{
       "/var/lib/containers/pgsql/data:/var/lib/postgresql/data:rw"
     ];
     log-driver = "journald";
-    extraOptions = [
-      "--network=rikka"
-    ];
   };
 }
