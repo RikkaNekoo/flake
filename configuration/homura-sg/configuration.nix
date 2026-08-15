@@ -13,5 +13,7 @@ _: {
 
   networking.hostName = "Homura-SG";
 
+  services.vscode-server.enable = true;
+
   system.stateVersion = "26.05";
 }

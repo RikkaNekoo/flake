@@ -37,6 +37,7 @@
       modules = [
         ./configuration/homura-sg/configuration.nix
         ./nixos/common
+        inputs.vscode-server.nixosModules.default
         inputs.disko.nixosModules.disko
       ];
       specialArgs = {
