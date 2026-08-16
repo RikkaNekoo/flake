@@ -30,6 +30,7 @@
     extraGroups = [ "wheel" ];
     openssh.authorizedKeys.keys = [
       "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJbU3Ry+vsDfPo3nkYi5MzO8dQ0LZu4yqtL3RoPYc3QZUhdISQIIpWsU12Dc+f0Vrdb0dgcoFZWE/NI+0NdKL4Q= rikka@rikka.im"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHoRq3Vp6U4G4lFth02aBKWdQ6DcdKat1hIaUhrqBgBw rikka@rikka.im"
     ];
   };
 
