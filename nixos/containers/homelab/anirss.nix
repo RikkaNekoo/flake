@@ -14,6 +14,10 @@ _:{
     log-driver = "journald";
     extraOptions = [
       "--network=host"
+      # This fix "chown: /usr/app: Operation not permitted"
+      "--cap-add=CHOWN"
+      "--cap-add=SETUID"
+      "--cap-add=SETGID"
     ];
   };
 }
