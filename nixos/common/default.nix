@@ -4,5 +4,6 @@ _: {
     ./i18n.nix
     ./nix.nix
     ./kernel.nix
+    ./nix-ld.nix
   ];
 }
