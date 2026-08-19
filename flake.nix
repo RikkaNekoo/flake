@@ -21,13 +21,17 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     vscode-server = {
       url = "github:nix-community/nixos-vscode-server";
       inputs.flake-parts.follows = "flake-parts";
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, darwin, ... }@inputs: {
     nixosConfigurations.Rikka-HomeLab = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -52,6 +56,16 @@
       specialArgs = {
         inherit inputs;
       };
+    };
+
+    darwinConfigurations."Google-Pixelbook" = darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      specialArgs = { 
+        inherit inputs;
+      };
+      modules = [
+        ./darwin/configuration.nix
+      ];
     };
   };
 }
