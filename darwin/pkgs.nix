@@ -7,7 +7,7 @@
     mpremote android-tools
 
     autoconf autoconf-archive automake cmake gcc gnumake meson ninja pkgconf
-    git hugo jadx nasm pipx rustup swift-format zig android-cli 
+    git hugo jadx nasm pipx rustup swift-format zig android-cli nixfmt nixd
 
     boost cairo dtc gmp lz4 xz librsvg libavif libraw libtool libusb1
 
