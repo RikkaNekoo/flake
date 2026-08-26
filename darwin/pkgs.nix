@@ -16,7 +16,7 @@
     gnupg libfido2 opensc openssh pcsclite pinentry_mac step-cli 
     yubikey-manager yubico-piv-tool
 
-    gnutar p7zip
+    gnutar _7zip-zstd-rar
 
     (python3.withPackages (ps: with ps; [ tkinter ]))
     jdk17

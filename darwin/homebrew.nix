@@ -22,7 +22,7 @@ _:{
       "appcleaner"
       "linearmouse"
       "localsend"
-      "maczip"
+      "keka"
       "secretive"
       "shottr"
       "theboredteam/boring-notch/boring-notch"
