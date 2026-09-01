@@ -60,12 +60,12 @@
 
     darwinConfigurations."Google-Pixelbook" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
-      specialArgs = { 
-        inherit inputs;
-      };
       modules = [
         ./darwin/configuration.nix
       ];
+      specialArgs = { 
+        inherit inputs;
+      };
     };
   };
 }

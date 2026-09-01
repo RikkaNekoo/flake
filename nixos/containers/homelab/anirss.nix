@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."ani-rss" = {
     image = "wushuo894/ani-rss:latest";
     user = "1000:100";

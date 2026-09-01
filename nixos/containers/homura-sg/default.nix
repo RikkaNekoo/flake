@@ -1,4 +1,4 @@
-_:{
+_: {
   imports = [
     ./autodiscover.nix
     ./caddy.nix

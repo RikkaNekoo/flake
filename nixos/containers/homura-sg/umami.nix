@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."umami" = {
     image = "ghcr.io/umami-software/umami:postgresql-latest";
     environmentFiles = [ "/var/lib/containers/umami/umami.env" ];

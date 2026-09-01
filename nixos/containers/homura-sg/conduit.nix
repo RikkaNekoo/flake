@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."conduit" = {
     image = "matrixconduit/matrix-conduit:latest";
     environmentFiles = [ "/var/lib/containers/conduit/conduit.env" ];

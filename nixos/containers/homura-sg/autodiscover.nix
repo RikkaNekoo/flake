@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."autodiscover" = {
     image = "monogramm/autodiscover-email-settings:latest";
     networks = [ "rikka" ];

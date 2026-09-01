@@ -1,6 +1,4 @@
-{ lib, pkgs, inputs, ... }:
-
-{
+_: {
   imports = [
     ./homebrew.nix
     ./pkgs.nix

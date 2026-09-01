@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."caddy" = {
     image = "ghcr.io/caddybuilds/caddy-cloudflare:latest";
     networks = [ "rikka" ];

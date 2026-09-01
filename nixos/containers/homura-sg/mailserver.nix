@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."mailserver" = {
     image = "ghcr.io/docker-mailserver/docker-mailserver:latest";
     hostname = "mail.rikka.im";

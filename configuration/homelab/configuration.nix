@@ -1,6 +1,4 @@
-{ config, lib, pkgs, ... }:
-
-{
+_: {
   imports = [
     ../../nixos/containers/homelab
     ./hardware-configuration.nix

@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."roundcube" = {
     image = "roundcube/roundcubemail:latest";
     environmentFiles = [ "/var/lib/containers/roundcube/roundcube.env" ];

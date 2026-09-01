@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."qbittorrent" = {
     image = "lscr.io/linuxserver/qbittorrent:latest";
     environment = {

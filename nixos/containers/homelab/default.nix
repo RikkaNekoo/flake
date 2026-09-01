@@ -1,4 +1,4 @@
-_:{
+_: {
   imports = [
     ./anirss.nix
     ./caddy.nix

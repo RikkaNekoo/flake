@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."twikoo" = {
     image = "imaegoo/twikoo";
     networks = [ "rikka" ];

@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."vaultwarden" = {
     image = "vaultwarden/server:latest";
     environmentFiles = [ "/var/lib/containers/vaultwarden/vaultwarden.env" ];

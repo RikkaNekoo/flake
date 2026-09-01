@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."jellyfin" = {
     image = "jellyfin/jellyfin:latest";
     environment = {

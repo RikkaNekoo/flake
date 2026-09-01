@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."pgsql" = {
     image = "postgres:17";
     environment = {

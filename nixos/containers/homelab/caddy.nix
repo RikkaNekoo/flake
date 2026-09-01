@@ -1,4 +1,4 @@
-_:{
+_: {
   virtualisation.oci-containers.containers."caddy" = {
     image = "cmunroe/caddy-dns:tencentcloud-latest";
     volumes = [
