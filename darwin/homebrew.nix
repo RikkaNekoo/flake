@@ -13,9 +13,7 @@ _:{
     ];
 
     casks = [
-      "font-jetbrains-mono-nerd-font"
-      "font-noto-sans-cjk"
-      "font-sarasa-gothic"
+      "font-maple-mono-normal-nf-cn"
       "hex-fiend"
       "iterm2"
       "visual-studio-code"
