@@ -31,7 +31,21 @@ _: {
     ];
   };
 
-  services.openssh.enable = true;
+  users.users.root = {
+    initialHashedPassword = "$6$mHp1fCFK8PPE9eHi$3rvW1eABV7Jjd926gN46RMMobm68dJqRyRergwV94/.ItJwfMuOtTI2NAWtB4g5ORxtexxPARipSa5Zhwccgc0";
+    openssh.authorizedKeys.keys = [
+      "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKgf4Sfl1WJtOLOmDLEaHQIdfC/J5SlEHUbEMoChdEgUMGAxj1FOnEkq2dVHMjSDmC1U5ijZj+295wwo2C5+YiI= rikka@rikka.im"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHoRq3Vp6U4G4lFth02aBKWdQ6DcdKat1hIaUhrqBgBw rikka@rikka.im"
+    ];
+  };
+
+
+  services.openssh = {
+    enable = true;
+    settings.PasswordAuthentication = false;
+    settings.KbdInteractiveAuthentication = false;
+    settings.PermitRootLogin = "prohibit-password";
+  };
   services.vscode-server.enable = true;
 
   system.stateVersion = "25.11";
