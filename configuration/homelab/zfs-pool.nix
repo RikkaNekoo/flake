@@ -3,7 +3,7 @@
 {
   # ZFS support
   boot.supportedFilesystems.zfs = true;
-  boot.zfs.package = config.boot.kernelPackages.zfs_cachyos;
+  # boot.zfs.package = config.boot.kernelPackages.zfs_cachyos;
   networking.hostId = "40eeb16e";
   services.zfs.autoScrub = {
     enable = true;
