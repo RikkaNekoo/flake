@@ -3,6 +3,7 @@ _: {
     ../../nixos/containers/homelab
     ./hardware-configuration.nix
     ./zfs-pool.nix
+    ./qbit-dscp.nix
     ./samba-with-avahi.nix
     ./enable-mlx4-vf.nix
     ./fix-libvirtd.nix
