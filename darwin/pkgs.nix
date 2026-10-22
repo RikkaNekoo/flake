@@ -8,6 +8,7 @@
 
     autoconf autoconf-archive automake cmake gcc gnumake meson ninja pkgconf
     git hugo jadx nasm pipx rustup swift-format zig android-cli nixfmt nixd
+    nodejs yarn
 
     boost cairo dtc gmp lz4 xz librsvg libavif libraw libtool libusb1
 
@@ -20,6 +21,7 @@
 
     (python3.withPackages (ps: with ps; [ tkinter ]))
     jdk17
-    virt-manager
+
+    (pkgs.callPackage ./dsh.nix { })
   ];
 }
