@@ -39,6 +39,8 @@ _: {
       "qbittorrent"
       "steam"
       "xld"
+      "zoom"
+      "thunderbird"
     ];
   };
 }
